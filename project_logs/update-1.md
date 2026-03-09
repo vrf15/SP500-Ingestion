@@ -2,9 +2,9 @@
 ---
 ## Date: 2026-3-8
 ---
-Personal Task: Creating a daily ingestion script for available SMP500 companies in the IT sector.
+**Personal Task**: Creating a daily ingestion script for available SMP500 companies in the IT sector.
 
-Result: Completed
+**Result**: Completed
 
 Notes:
 It took me around 8 hours to write and finish the Python script. It took a while, but it's going to serve as a template for the rest of the daily ingestion scripts. I also learned a lot by searching everything up.
