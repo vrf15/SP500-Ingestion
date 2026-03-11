@@ -81,3 +81,6 @@ WDC     FAILED
 ZBRA    FAILED
 ZS      FAILED
 TEAM    FAILED
+
+===
+Note: All of [MATERIALS],[REAL_ESTATE], and [UTILITIES] sector failed... I will update the list once I am done setting up all of ingestion.
