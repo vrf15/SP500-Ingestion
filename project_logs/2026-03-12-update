@@ -1,0 +1,36 @@
+# Update 3
+---
+## Date: 2026-3-12
+---
+**Personal Task**: Test all the other sectors, commence daily ingestion, and initialize dbt.
+
+**Result**: Completed
+
+Notes on dlt and DAG changes:
+
+The daily ingestion has been set up for all the sectors. I made one minor change in the DAGs and one for the dlt script.
+
+The schedule in the DAGs have been changed to "1 22 * * 1-5" from "0 2 * * 2-6". Airflow orchestrated run times at around 2:00 am EST.
+
+The previous dlt scripts included this line:
+
+RUN_DATE = (datetime.now() - pd.tseries.offsets.BDay(1)).strftime("%Y-%m-%d")
+
+This line causes the script to pull data from the last recorded business day. I made this decision then because when I initially tested out the APIs, it would not work on the "current" day.
+I must have tried pulling the record on a weekend, which might have reported an error, as the markets are only closed and recorded on weekdays. 
+
+I changed that one line in the dlt scripts instead:
+
+RUN_DATE = pendulum.now("America/New_York").strftime("%Y-%m-%d")
+
+Now, the markets will be synced with the Eastern Time Zone and an hour after the markets close. I don't know how quickly FMP updates its data set, but I believe an hour is a considerable buffer after the markets close.
+
+---
+
+Notes on dbt and plans in the near future:
+
+I initialized dbt within the project, and I am genuinely excited to start transforming the data. I will be working on the dbt transformations as well as creating backfill scripts to supplement daily ingestion.
+In the future, I would like to incorporate DynamoDB into my stack to familiarize myself with NoSQL. I think the best use case for a NoSQL DB in this lightweight project is to store JSON metadata after the ingestion scripts.
+We can modify the ingestion scripts and the DAGs to scan DynamoDB for the latest ingestion date and backfill days that we might miss due to an error or outage.
+
+This project is much simpler than the other projects I have been working on, but I have the advantage of being the only contributor to it. I can play around with tools as I see fit, and I am learning more and more about architecting my own stack.
