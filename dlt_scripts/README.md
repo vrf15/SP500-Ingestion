@@ -1,4 +1,4 @@
-# dlt_scripts
+# DLT Scripts
 
 ### Breakdown
 
@@ -8,7 +8,7 @@ From what I have read, Airbyte can also act as an orchestrator and has many tool
 I plan on orchestrating these scripts via Airflow. Writing dlt_scripts and DAGs will help me hone my Python skills.
 
 ---
-### Sectors included
+### SECTORS INCLUDED
 
 CD - Consumer Discretionary
 
