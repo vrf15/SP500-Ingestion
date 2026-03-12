@@ -20,7 +20,7 @@ with DAG(
     default_args=default_args,
     description="Daily FMP EN ingestion to S3 and Postgres",
     start_date=datetime(2026, 3, 8),
-    schedule="0 22 * * 1-5",
+    schedule="3 22 * * 1-5",
     catchup=False,
     tags=["smp500", "fmp", "en", "ingestion"],
 ) as dag:
