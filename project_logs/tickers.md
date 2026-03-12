@@ -5,7 +5,7 @@ This is a list of the APIs I have manually tested.
 I am using the free tiers for all APIs. This list is particularly useful for keeping track of
 companies not available in the free tiers. 
 
-===
+---
 
 ### Financial Modeling Prep
 
@@ -82,5 +82,6 @@ ZBRA    FAILED
 ZS      FAILED
 TEAM    FAILED
 
-===
+---
+
 Note: All of [MATERIALS],[REAL_ESTATE], and [UTILITIES] sector failed... I will update the list once I am done setting up all of ingestion.
