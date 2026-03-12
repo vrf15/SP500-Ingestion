@@ -11,11 +11,18 @@ I plan on orchestrating these scripts via Airflow. Writing dlt_scripts and DAGs 
 ### Sectors included
 
 CD - Consumer Discretionary
+
 COMMS - Communication Services
+
 CS - Consumer Staples
+
 EN - Energy
+
 FIN - Financials
+
 HC - Health Care
+
 IND - Industrials
+
 IT - Information Technology
 
